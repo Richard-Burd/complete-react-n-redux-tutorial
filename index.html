@@ -23,10 +23,61 @@
 
     <script type="text/babel">
       class App extends React.Component {
+        state = {
+          name: 'Crystal',
+          age: 35
+        }
+
+        // This won't work because it's not an arrow function, so "this" can't be read
+        //handleClick(e){
+          // console.log(e.target) // 'target' identifies the source of the e (event)
+        //  console.log(this.state)
+        //}
+
+        // this will work because it is set to an arrow function
+        // arrow functions bind to whatever "this" is right outside the function
+        // which happens to be the class instance
+        handleClick = (e) => {
+          this.setState({
+            name: 'Yoshi',
+            age: 21
+          });
+          console.log(this.state);
+        }
+
+        handleMouseOver(event){
+          console.log(event.target, event.pageX) // "pageX" is where you are pixelwise on the screen
+        }
+
+        handleCopy(anythingHere){
+          console.log('Try being original for once')
+        }
+
+        handleChange = (e) => {
+          this.setState({
+            name: e.target.value
+          })
+        }
+
+        handleSubmit = (e) => {
+         e.preventDefault();
+         console.log('form submitted', this.state.name)
+        }
+
         render() {
           return (
             <div className="app-content">
               <h1>Hey, ninjas</h1>
+              <p>My name is: { this.state.name } and I am { this.state.age }</p>
+              {/* If we call the function like this: handleClick() - then it will fire on a page load */}
+              {/* we want it ti fire only when there's a user click (onClick) */}
+              <button onClick={this.handleClick}>Click Me</button>
+              <button onMouseOver={this.handleMouseOver}>Hover me</button>
+              <p onCopy={this.handleCopy}>What we think, we become</p>
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" onChange={this.handleChange}/>
+                <button>Submit a new name</button>
+              </form>
             </div>
           )
         }
