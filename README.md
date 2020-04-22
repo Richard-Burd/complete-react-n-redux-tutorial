@@ -1,12 +1,12 @@
 ## Left off Here
 
-I left off here on 4/20/2020 @ 5:27pm:
+I left off here on 4/22/2020 @ 4:00pm:
 https://www.youtube.com/watch?v=o4GCcSn-hEw&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=19
-...on lesson 19.  This is where I need to start reading again...so go here!!!!!
+...on lesson 24.  This is where I need to start reading again...so go here!!!!!
 
 ## Cool Graphics
 
-<a href="https://imgur.com/Jb0v2ek"><img src="https://i.imgur.com/Jb0v2ek.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/HwFEWyk"><img src="https://i.imgur.com/HwFEWyk.jpg" title="source: imgur.com" /></a>
 
 ## Misc. Notes
 
