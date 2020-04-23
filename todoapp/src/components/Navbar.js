@@ -1,7 +1,20 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
 
-const Navbar = () => {
+// now we're going to add a higher order component called "withRouter"
+// a higher order component is s.thing that wraps another component
+// and gives it extra capabilities.  In this case we're gonna apply some extra
+// capability to the "props" in the setTimeout() function below
+// import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, withRouter } from 'react-router-dom'
+
+// we need to pass in props as a parameter to do the progarammatic redirect below
+const Navbar = (/*props*/) => {
+  //console.log(props)
+  //// this programmatic redirect is similiar to the one in Contact.js
+  //setTimeout(() => {
+  //  props.history.push('/about')
+  //}, 4000 )
+
   return (
     <div className="container">
       <nav className="nav-wrapper red darken-3">
@@ -28,4 +41,5 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+// we need to wrap this with a higher order component so it can wrap the props
+export default withRouter(Navbar)

@@ -3,11 +3,12 @@ import Todos from './Todos';
 import AddTodo from './AddTodo';
 import Navbar from './components/Navbar';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact'
+import Post from './components/Post'
 
 class App extends Component {
   state = {
@@ -39,9 +40,16 @@ class App extends Component {
       <BrowserRouter>
         <div className="todo-app container">
           <Navbar />
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+            {/* Who's to say that any of the three routes above are not post id's? */}
+            {/* we import & use <Switch> to say that in any point in time we only  */}
+            {/* want one of these routes, and you cannot have a combination of two  */}
+            {/* or more at any given time  */}
+            <Route path="/:post_id" component={Post} />
+          </Switch>
           <h1 className="center blue-text">Todo's</h1>
           <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
           <AddTodo addTodo={this.addTodo}/>

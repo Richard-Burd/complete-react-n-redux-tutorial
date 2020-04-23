@@ -12,3 +12,9 @@ https://www.youtube.com/watch?v=GiaFedx5cfA&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNw
 
 files for this playlist are here:
 https://github.com/iamshaunjp/react-redux-complete-playlist
+
+## Additional Installed Packages In This workspace
+
+1.) complete-react-n-redux-tutorial/todoapp (master) $ npm install react-router-dom
+2.) complete-react-n-redux-tutorial/todoapp (master) $ npm install axios
+    NOTE: axios is an alternative for fetch
