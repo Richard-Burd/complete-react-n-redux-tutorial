@@ -1,7 +1,7 @@
 ## Left off Here
 
-This workspace follows a series of codealongs.  I left off here on 4/22/2020 @ 4:30pm:
-https://www.youtube.com/watch?v=o4GCcSn-hEw&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=19
+This workspace follows a series of codealongs.  I left off here on 4/22/2020 @ 6:22pm:
+https://www.youtube.com/watch?v=GiaFedx5cfA&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=27
 ...on lesson 24.
 
 ## Cool Graphics

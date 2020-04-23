@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import Todos from './Todos'
+import Todos from './Todos';
+import AddTodo from './AddTodo';
+import Navbar from './components/Navbar';
+
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact'
 
 class App extends Component {
   state = {
@@ -18,12 +26,27 @@ class App extends Component {
     })
   }
 
+  addTodo = (todo) => {
+    todo.id = Math.random();
+    let todos = [...this.state.todos, todo];
+    this.setState({
+      todos
+    })
+  }
+
   render() {
     return (
-      <div className="todo-app container">
-        <h1 className="center blue-text">Todo's</h1>
-        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
-      </div>
+      <BrowserRouter>
+        <div className="todo-app container">
+          <Navbar />
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
+          <h1 className="center blue-text">Todo's</h1>
+          <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+          <AddTodo addTodo={this.addTodo}/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
