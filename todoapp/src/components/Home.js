@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import axios from 'axios'; // alternative to fetch
+// import axios from 'axios'; // alternative to fetch
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png'
+import { connect } from 'react-redux';
+
 // functional components cannot use lifecycle hooks like "componentDidMount"
 // so let's change this.
 //const Home = () => {
 
 class Home extends Component {
+
+// REDUX - we're taking this out because now we're using the state in
+// ./reducers/rootReducer.js
+/*
   state = {
     posts: []
   }
@@ -21,8 +27,12 @@ class Home extends Component {
         })
       })
   }
+*/
+
   render() {
-    const { posts } = this.state;
+    // const { posts } = this.state;
+    // Let's do it with Redux now:
+    const { posts } = this.props;
     const postList = posts.length ? (
       posts.map(post => {
         return (
@@ -50,4 +60,11 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+// export default Home
+// Let's use Redux:
+export default connect(mapStateToProps)(Home)

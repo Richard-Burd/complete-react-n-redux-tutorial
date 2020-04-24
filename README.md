@@ -1,8 +1,8 @@
 ## Left off Here
 
-This workspace follows a series of codealongs.  I left off here on 4/22/2020 @ 6:22pm:
-https://www.youtube.com/watch?v=GiaFedx5cfA&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=27
-...on lesson 24.
+This workspace follows a series of codealongs.  I left off here on 4/23/2020 @ 5:57pm:
+https://www.youtube.com/watch?v=SoOTQW4-tYk&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG&index=41
+...on lesson 41.
 
 ## Cool Graphics
 
@@ -18,3 +18,5 @@ https://github.com/iamshaunjp/react-redux-complete-playlist
 1.) complete-react-n-redux-tutorial/todoapp (master) $ npm install react-router-dom
 2.) complete-react-n-redux-tutorial/todoapp (master) $ npm install axios
     NOTE: axios is an alternative for fetch
+
+3.) complete-react-n-redux-tutorial/todoapp (master) $ npm install redux react-redux
